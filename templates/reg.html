@@ -1,0 +1,65 @@
+﻿{% extends "base.html" %}
+{% block title %}
+Registration
+{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+{% block content %}
+<form class="login100-form" method="post" action="reg">
+    <span class="login100-form-title p-b-37">
+        Register as a new user
+    </span>
+    <br>
+    <br>
+
+    <div class="wrap-input200 validate-input m-b-16" data-validate="Name is required">
+        <input class="input100" type="text" name="name" placeholder="Name is required" value="">
+        <span class="focus-input100"></span>
+    </div>
+
+    <br>
+    <br>
+    <div class="wrap-input200 validate-input m-b-16" data-validate="Email ID is requuired">
+        <input class="input100" type="text" name="email" placeholder="Email ID" value="">
+        <span class="focus-input100"></span>
+    </div>
+    <br>
+
+    <label for="question">Choose a Security Questions:</label>
+    <select name="question">
+        <option value="City you were born">City you were born</option>
+        <option value="favourite color">favourite color</option>
+        <option value="year you were born in">year you were born in</option>
+    </select>
+
+    <br>
+    <br>
+
+    <div class="wrap-input200 validate-input m-b-16" data-validate="Answer is required">
+        <input class="input100" type="text" name="answer_1" placeholder="Answer">
+        <span class="focus-input100"></span>
+    </div>
+    <br>
+    <br>
+
+    <div class="wrap-input200 validate-input m-b-16" data-validate="Confirm Answer">
+        <input class="input100" type="text" name="answer_2" placeholder="Confirm Answer">
+        <span class="focus-input100"></span>
+    </div>
+
+
+
+    <br>
+    <br>
+
+
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn" type="submit" name="reg_user">
+            Register Now
+        </button>
+    </div>
+</form>
+{% endblock %}
+

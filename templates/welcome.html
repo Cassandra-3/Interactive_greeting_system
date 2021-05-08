@@ -1,0 +1,76 @@
+﻿{% extends "base.html" %}
+{% block title %}
+Welcome
+{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+{% block content %}
+<form class="login100-form" action="search" method="post">
+    <span class="login100-form-title p-b-37">
+
+
+        <!-- logged in user information -->
+
+        <p>Welcome <strong>{{ name }}</strong></p>
+
+
+        <label for="user">How may I help you?</label>
+    </span>
+    <br>
+
+    <div class="wrap-input200 validate-input m-b-16" data-validate="Search for Location">
+        <input class="input100" type="text" name="user" placeholder="Search for Location" value="{{search}}">
+        <span class="focus-input100"></span>
+    </div>
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn" type="submit">
+            Search
+        </button>
+    </div>
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn" type="submit">
+            <a href="searchvoice">
+                Speak
+            </a>
+        </button>
+    </div>
+    <br>
+
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            <a href="welcome">
+
+                Student Resources
+            </a>
+        </button>
+    </div>
+    <br>
+    <br>
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            <a href="http://134.122.46.178/list.html">
+
+                Meeting Rooms / Offices
+            </a>
+        </button>
+    </div>
+    <br>
+    <br>
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            <a href="http://134.122.46.178/maps/campusmap.html">
+                Campus Map
+            </a>
+        </button>
+    </div>
+    <br>
+    <br>
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            <a href="logout">EXIT</a>
+        </button>
+    </div>
+</form>
+{% endblock %}

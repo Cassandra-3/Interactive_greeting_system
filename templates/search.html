@@ -1,0 +1,60 @@
+﻿{% extends "base.html" %}
+{% block title %}
+Search Results
+{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+{% block content %}
+<form class="login100-form">
+    <span class="login100-form-title p-b-37">
+        Search Results
+    </span>
+    <br>
+    <br>
+    {% for element in res %}
+    {% if element == "library" %}
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            <a href="http://134.122.46.178/maps/list2.html">{{ element }}</a>
+        </button>
+    </div>
+    <br>
+    {% elif element == "resource center" %}
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            <a href="http://134.122.46.178/maps/C2101.html">{{ element }}</a>
+        </button>
+    </div>
+    <br>
+    {% elif element == "registrar office" %}
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            <a href="http://134.122.46.178/maps/C2101.html">{{ element }}</a>
+        </button>
+    </div>
+    <br>
+    {% elif element == "campus store" %}
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            <a href="http://134.122.46.178/maps/campusmap.html">{{ element }}</a>
+        </button>
+    </div>
+    <br>
+
+    {% endif %}
+    {% endfor %}
+    {% if res == [] %}
+    <h5>Sorry! No results found</h5>
+    {% endif %}
+    <br>
+
+    <div class="container-login100-form-btn">
+        <button class="login100-form-btn">
+            <a href="welcome">Back</a>
+        </button>
+
+</form>
+{% endblock %}
+

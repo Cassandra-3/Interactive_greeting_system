@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}
+Home page
+{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+{% block content %}
+<span class="login100-form-title p-b-37">
+	Welcome to Fleming College
+</span>
+<br>
+<br>
+<div class="container-login100-form-btn">
+	<button class="login100-form-btn">
+		<a href="regdisclamer">
+			Registered User
+		</a>
+		<!--Registered User-->
+	</button>
+
+
+</div>
+<br>
+<br>
+<div class="container-login100-form-btn">
+	<button class="login100-form-btn">
+		<a href="facialregdisclamer">Resgister New User</a>
+		<!--	Resgister New User-->
+	</button>
+</div>
+<br>
+<br>
+<div class="container-login100-form-btn">
+	<button class="login100-form-btn">
+		<a href="guest">	Guest User</a>
+		<!--		Guest User-->
+	</button>
+</div>
+
+
+{% endblock %}
+

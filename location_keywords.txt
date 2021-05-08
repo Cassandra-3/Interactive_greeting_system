@@ -1,0 +1,14 @@
+library,print,book,books,meeting,room,workshop,research,catalogue,ebook,database,citation,tutorial,tutorials,reference,journals,bulletins,e-journals,
+resource center,computers,print,it,resource,career,service,information,technology
+campus store,textbook,sweater,accessory,accessories,calculator,stationery
+registrar office,registrar,register,courses,timetable,fees,payment,schedule,id,transcripts,academic,records,grades,financial
+b3200
+b2182
+b2181
+b2351
+d0112.3
+c2101
+c2125
+d1122
+
+

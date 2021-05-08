@@ -1,0 +1,13 @@
+﻿{% extends "base.html" %}
+{% block title %}
+Register using Facial Recognition
+{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/face.css') }}">
+{% endblock %}
+{% block content %}
+<h1>Register using Facial Recognition</h1>
+<img id="bg" class="center" src="{{ url_for('video_feed') }}">
+<meta http-equiv="refresh" content="7;url={{ url_for('registerface') }}" />
+{% endblock %}

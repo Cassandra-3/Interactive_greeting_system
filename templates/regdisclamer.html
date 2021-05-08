@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}
+Are you registered with Facial Recognition?
+{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+{% block content %}
+<form class="login100-form">
+	<span class="login100-form-title p-b-37">
+		Registered using Facial Recoginition ?
+	</span>
+	<br>
+	<br>
+
+	<div class="container-login100-form-btn">
+		<button class="login100-form-btn">
+			<a href="face_reco">
+				Yes
+			</a>
+		</button>
+	</div>
+	<br>
+	<br>
+	<div class="container-login100-form-btn">
+		<button class="login100-form-btn">
+			<a href="login">No</a>
+			<!--	No-->
+		</button>
+	</div>
+</form>
+{% endblock %}

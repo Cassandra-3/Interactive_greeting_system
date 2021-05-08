@@ -1,0 +1,27 @@
+﻿{% extends "base.html" %}
+{% block title %}
+Guest
+{% endblock %}
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+{% endblock %}
+{% block content %}
+<form class="login100-form" method="post" action="guest">
+    <span class="login100-form-title p-b-37">
+        Continue as Guest
+    </span>
+    <br>
+    <br>
+
+    <div class="wrap-input200 validate-input m-b-16" data-validate="name is required">
+        <input class="input100" type="text" name="name" placeholder="Enter your Name">
+        <span class="focus-input100"></span>
+    </div>
+    <br>
+    <br>
+    <div class="container-login100-form-btn">
+        <button type="submit" class="login100-form-btn" name="login_guest">Login</button>
+    </div>
+</form>
+{% endblock %}
